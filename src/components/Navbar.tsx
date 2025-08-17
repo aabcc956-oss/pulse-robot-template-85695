@@ -52,11 +52,11 @@ const Navbar = () => {
             e.preventDefault();
             scrollToTop();
           }}
-          aria-label="Pulse Robot"
+          aria-label="Cinza Rocca"
         >
           <img 
-            src="/logo.svg" 
-            alt="Pulse Robot Logo" 
+            src="/cinza-rocca-logo.jpg" 
+            alt="Cinza Rocca Logo" 
             className="h-7 sm:h-8" 
           />
         </a>
@@ -73,8 +73,9 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          <a href="#features" className="nav-link">Services</a>
+          <a href="#details" className="nav-link">Portfolio</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -113,10 +114,20 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            About
+            Services
           </a>
           <a 
             href="#details" 
+            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
+            onClick={() => {
+              setIsMenuOpen(false);
+              document.body.style.overflow = '';
+            }}
+          >
+            Portfolio
+          </a>
+          <a 
+            href="#contact" 
             className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
             onClick={() => {
               setIsMenuOpen(false);

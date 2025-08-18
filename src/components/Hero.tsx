@@ -88,15 +88,17 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover" 
+      className="overflow-hidden relative min-h-screen flex items-center bg-background" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/Header-background.webp")',
-        backgroundPosition: 'center 30%', 
         padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
       }}
     >
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
+      {/* Dark gradient background with subtle accent */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-background to-background/95"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-96 bg-gradient-radial from-primary/10 via-transparent to-transparent"></div>
+      </div>
       
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-12 items-center">
@@ -110,17 +112,20 @@ const Hero = () => {
             </div>
             
             <h1 
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
+              className="section-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight opacity-0 animate-fade-in text-foreground font-extrabold tracking-tight" 
               style={{ animationDelay: "0.3s" }}
             >
-              Cinza Rocca<br className="hidden sm:inline" />Digital Agency
+              Transform Your Business with{" "}
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                Digital Excellence
+              </span>
             </h1>
             
             <p 
               style={{ animationDelay: "0.5s" }} 
-              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
+              className="section-subtitle mt-6 sm:mt-8 mb-6 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-muted-foreground font-normal text-lg sm:text-xl text-left max-w-3xl"
             >
-              Transforming brands with end-to-end marketing, high-conversion eCommerce, and data-driven growth strategies.
+              From logos to enterprise-level strategy. We turn weaknesses into competitive advantages with proven digital solutions that deliver real results.
             </p>
             
             <div 
@@ -128,21 +133,12 @@ const Hero = () => {
               style={{ animationDelay: "0.7s" }}
             >
               <a 
-                href="#get-access" 
-                className="flex items-center justify-center group w-full sm:w-auto text-center" 
-                style={{
-                  backgroundColor: '#FE5C02',
-                  borderRadius: '1440px',
-                  boxSizing: 'border-box',
-                  color: '#FFFFFF',
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  lineHeight: '20px',
-                  padding: '16px 24px', // Slightly reduced padding for mobile
-                  border: '1px solid white',
-                }}
+                href="https://calendar.google.com/calendar/u/0?cid=Y2luemFyb2NjYUBnbWFpbC5jb20" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center group w-full sm:w-auto text-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg"
               >
-                Get Started
+                Book Strategy Call
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>

@@ -71,11 +71,11 @@ const Navbar = () => {
               scrollToTop();
             }}
           >
-            Home
+            Главная
           </a>
-          <a href="#features" className="nav-link">Services</a>
-          <a href="#details" className="nav-link">Portfolio</a>
-          <a href="#contact" className="nav-link">Contact</a>
+          <a href="#features" className="nav-link">Услуги</a>
+          <a href="#details" className="nav-link">Портфолио</a>
+          <a href="#contact" className="nav-link">Контакты</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
@@ -104,7 +104,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Home
+            Главная
           </a>
           <a 
             href="#features" 
@@ -114,7 +114,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Services
+            Услуги
           </a>
           <a 
             href="#details" 
@@ -124,7 +124,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Portfolio
+            Портфолио
           </a>
           <a 
             href="#contact" 
@@ -134,7 +134,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Contact
+            Контакты
           </a>
         </nav>
       </div>

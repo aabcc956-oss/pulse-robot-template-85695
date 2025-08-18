@@ -108,16 +108,15 @@ const Hero = () => {
               style={{ animationDelay: "0.1s" }}
             >
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Digital Excellence</span>
+              <span>Цифровое превосходство</span>
             </div>
             
             <h1 
               className="section-title text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-tight opacity-0 animate-fade-in text-foreground font-extrabold tracking-tight" 
               style={{ animationDelay: "0.3s" }}
             >
-              Transform Your Business with{" "}
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Digital Excellence
+                Cinza Rocca
               </span>
             </h1>
             
@@ -125,7 +124,7 @@ const Hero = () => {
               style={{ animationDelay: "0.5s" }} 
               className="section-subtitle mt-6 sm:mt-8 mb-6 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-muted-foreground font-normal text-lg sm:text-xl text-left max-w-3xl"
             >
-              From logos to enterprise-level strategy. We turn weaknesses into competitive advantages with proven digital solutions that deliver real results.
+              Наша сила - создавать результат
             </p>
             
             <div 
@@ -138,37 +137,26 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="flex items-center justify-center group w-full sm:w-auto text-center bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-4 px-8 rounded-full transition-all duration-300 text-lg"
               >
-                Book Strategy Call
+                Записаться на консультацию
                 <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
           
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
-            {lottieData ? (
-              <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-                <LottieAnimation 
-                  animationPath={lottieData} 
-                  className="w-full h-auto max-w-lg mx-auto"
-                  loop={true}
-                  autoplay={true}
-                />
+            <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
+              <div className="relative w-full h-[400px] sm:h-[500px] overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-400 via-gray-500 to-orange-600 opacity-90"></div>
+                <div className="absolute inset-0 animate-pulse">
+                  <div className="metamorphosis-animation w-full h-full relative overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-r from-orange-500/60 to-gray-600/60 rounded-full scale-110 animate-spin-slow"></div>
+                    <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-orange-400 to-gray-500 rounded-full opacity-80 animate-float"></div>
+                    <div className="absolute bottom-1/4 right-1/4 w-24 h-24 bg-gradient-to-tl from-gray-400 to-orange-500 rounded-full opacity-70 animate-float-delayed"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-40 h-40 bg-gradient-to-r from-orange-300 to-gray-400 rounded-full opacity-60 animate-pulse-slow"></div>
+                  </div>
+                </div>
               </div>
-            ) : (
-              <>
-              <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
-              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-                <img 
-                  ref={imageRef} 
-                  src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
-                  alt="Atlas Robot" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
-                  style={{ transformStyle: 'preserve-3d' }} 
-                />
-                <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
-              </div>
-              </>
-            )}
+            </div>
           </div>
         </div>
       </div>
